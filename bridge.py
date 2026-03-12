@@ -86,7 +86,6 @@ class TelegramCodexBridge:
     def run(self) -> None:
         self.acquire_lock()
         self.log_event("SYSTEM", "Bridge started")
-        self.send_message(self.allowed_chat_id, "Telegram Codex bridge is online.")
         offset = self.load_offset()
         while True:
             try:
